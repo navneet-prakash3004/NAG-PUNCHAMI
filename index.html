@@ -1,0 +1,282 @@
+ n<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nag Panchami - A Legendary Celebration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background-color: #111;
+            overflow-x: hidden;
+            position: relative;
+            height: 100vh;
+        }
+
+        /* Flaming Particles */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 69, 0, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 140, 0, 0.5);
+            animation: moveParticles 15s linear infinite, flicker 0.5s infinite alternate;
+        }
+
+        @keyframes moveParticles {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        header {
+            height: 100vh;
+            background: url('https://example.com/epic-bg.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            z-index: 3;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            z-index: 3;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        section {
+            padding: 100px 0;
+            background-color: #111;
+            position: relative;
+            color: #fff;
+            z-index: 2;
+        }
+
+        section:nth-of-type(odd) {
+            background: #222;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .parallax {
+            background: url('https://example.com/parallax-bg.jpg') no-repeat center center/cover;
+            height: 400px;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        .highlight {
+            background: #FFD700;
+            color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        /* Scroll Animations */
+        .fadeIn {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .fadeIn.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#significance">Significance</a>
+        <a href="#celebration">Celebration</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Nag Panchami Festival</h1>
+        <p>A Celebration of Serpents and Divinity</p>
+    </header>
+
+    <div class="container">
+        <section id="about" class="fadeIn">
+            <h2>About Nag Panchami</h2>
+            <p>Nag Panchami is a legendary Hindu festival dedicated to the worship of Nagas, or serpents. Observed across India, it is celebrated on the fifth day of the bright half of the lunar month of Shravana (July/August). This festival is not just about reverence for serpents but also about embracing the mysteries of nature and the divine connection between humans and the natural world.</p>
+            <div class="highlight">Ancient Traditions, Timeless Devotion</div>
+        </section>
+
+        <div class="parallax"></div>
+
+        <section id="significance" class="fadeIn">
+            <h2>Significance</h2>
+            <p>In Hindu mythology, serpents hold a powerful place, often depicted as protectors of treasures and symbols of rebirth, immortality, and wisdom. Nag Panchami is a day to honor these mystical beings, believed to be close to the gods. It is said that worshipping Nagas brings protection and blessings, safeguarding devotees from snake bites and other dangers.</p>
+        </section>
+
+        <section id="celebration" class="fadeIn">
+            <h2>How It is Celebrated</h2>
+            <p>On this sacred day, devotees clean their homes, draw intricate snake patterns at their doorsteps, and offer milk, sweets, and flowers to snake idols. In temples, priests perform special pujas, chanting mantras to appease the Nagas. The festival is marked by a deep sense of reverence and a connection to the ancient traditions that have been passed down through generations.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nag Panchami Festival | All Rights Reserved | <a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            const elements = document.querySelectorAll('.fadeIn');
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+
+        // Create 200 flaming particles to cover the full screen
+        for (let i = 0; i < 200; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 15}s`;
+            particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+            document.body.appendChild(particle);
+        }
+    </script>
+
+</body>
+</html>
